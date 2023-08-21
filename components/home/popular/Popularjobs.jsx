@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native'
-
 import { useRouter } from 'expo-router'
 import { icons, images, SIZES, COLORS } from '../../../constants'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
@@ -17,7 +16,6 @@ const Popularjobs = () => {
 
   const [selectedJob, setSelectedJob] = useState();
 
-  
   const handleCardPress = (item) => {
     router.push(`/job-details/${item.job_id}`);
     setSelectedJob(item.job_id);
